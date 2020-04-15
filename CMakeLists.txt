@@ -1,5 +1,8 @@
-cmake_minimum_required(VERSION 3.16)
-cmake_policy(SET CMP0048 NEW)
+cmake_minimum_required(VERSION 2.8.8)
+
+if (POLICY CMP0048)
+    cmake_policy(SET CMP0048 NEW)
+endif (POLICY CMP0048)
 
 
 project(brainfuck LANGUAGES C)
