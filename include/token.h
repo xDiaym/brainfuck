@@ -15,4 +15,4 @@ typedef struct token {
 token_t *create_token(token_type type);
 void delete_token(token_t* token);
 
-#endif//BRAINFUCK_TOKEN_H
+#endif /* BRAINFUCK_TOKEN_H */

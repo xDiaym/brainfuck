@@ -11,7 +11,8 @@ set(CMAKE_C_STANDARD 99)
 set(BRAINFUCK_SRC_DIR ${PROJECT_SOURCE_DIR}/src)
 set(BRAINFUCK_SRC
         "${BRAINFUCK_SRC_DIR}/main.c"
-        "${BRAINFUCK_SRC_DIR}/token.c")
+        "${BRAINFUCK_SRC_DIR}/token.c"
+        "${BRAINFUCK_SRC_DIR}/token_list.c")
 
 include_directories("${PROJECT_SOURCE_DIR}/include")
 

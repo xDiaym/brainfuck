@@ -7,7 +7,7 @@ token_t *create_token(token_type type) {
     return token;
 }
 
+/*! THIS METHOD DO NOT DELETE NEXT TOKEN */
 void delete_token(token_t* token) {
-    /*! THIS DON`T DELETE NEXT TOKEN */
     free(token);
 }
