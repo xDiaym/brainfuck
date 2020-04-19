@@ -1,4 +1,4 @@
-#include "token.h"
+#include "../include/compiler/token.h"
 
 token_t *create_token(token_type type) {
     token_t *token = malloc(sizeof(token_t));

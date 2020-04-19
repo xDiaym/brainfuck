@@ -1,7 +1,5 @@
 #include <stdio.h>
-#include "tokenize.h"
-#include "token_list.h"
-#include "token.h"
+#include <compiler/compiler.h>
 
 int main(int argc, char **argv) {
     if (argc == 1) {

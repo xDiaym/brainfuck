@@ -4,21 +4,20 @@ if (POLICY CMP0048)
     cmake_policy(SET CMP0048 NEW)
 endif (POLICY CMP0048)
 
-
-project(brainfuck LANGUAGES C)
-set(CMAKE_C_STANDARD 99)
-
 if (MSVC)
     add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 endif (MSVC)
 
-set(BRAINFUCK_SRC_DIR ${PROJECT_SOURCE_DIR}/src)
-set(BRAINFUCK_SRC
-        "${BRAINFUCK_SRC_DIR}/main.c"
-        "${BRAINFUCK_SRC_DIR}/token.c"
-        "${BRAINFUCK_SRC_DIR}/token_list.c"
-        "${BRAINFUCK_SRC_DIR}/tokenize.c")
+project(brainfuck LANGUAGES C)
+set(CMAKE_C_STANDARD 99)
 
-include_directories("${PROJECT_SOURCE_DIR}/include")
 
-add_executable(brainfuck "${BRAINFUCK_SRC}")
+add_subdirectory(compiler)
+
+
+add_executable("${PROJECT_NAME}"
+        "${PROJECT_SOURCE_DIR}/src/main.c")
+
+target_link_libraries("${PROJECT_NAME}"
+        PUBLIC
+            compiler)

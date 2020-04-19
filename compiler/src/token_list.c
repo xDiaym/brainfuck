@@ -1,4 +1,4 @@
-#include "token_list.h"
+#include "../include/compiler/token_list.h"
 
 token_list_t *create_token_list() {
     token_list_t *list = malloc(sizeof(token_list_t));

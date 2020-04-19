@@ -1,4 +1,4 @@
-#include "tokenize.h"
+#include "../include/compiler/tokenize.h"
 
 token_type get_token_type(int symbol) {
     switch (symbol) {
