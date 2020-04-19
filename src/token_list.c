@@ -21,9 +21,9 @@ void push_token(token_list_t *list, token_t *token) {
     list->size++;
 }
 
-void delete_token_list(token_list_t* list) {
+void delete_token_list(token_list_t *list) {
     for (size_t i = 0; i < list->size; i++) {
-        token_t* second = list->head->next;
+        token_t *second = list->head->next;
         delete_token(list->head);
         list->head = second;
     }

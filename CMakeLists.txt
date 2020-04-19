@@ -8,11 +8,16 @@ endif (POLICY CMP0048)
 project(brainfuck LANGUAGES C)
 set(CMAKE_C_STANDARD 99)
 
+if (MSVC)
+    add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+endif (MSVC)
+
 set(BRAINFUCK_SRC_DIR ${PROJECT_SOURCE_DIR}/src)
 set(BRAINFUCK_SRC
         "${BRAINFUCK_SRC_DIR}/main.c"
         "${BRAINFUCK_SRC_DIR}/token.c"
-        "${BRAINFUCK_SRC_DIR}/token_list.c")
+        "${BRAINFUCK_SRC_DIR}/token_list.c"
+        "${BRAINFUCK_SRC_DIR}/tokenize.c")
 
 include_directories("${PROJECT_SOURCE_DIR}/include")
 

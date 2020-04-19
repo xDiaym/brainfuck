@@ -8,6 +8,6 @@ token_t *create_token(token_type type) {
 }
 
 /*! THIS METHOD DO NOT DELETE NEXT TOKEN */
-void delete_token(token_t* token) {
+void delete_token(token_t *token) {
     free(token);
 }

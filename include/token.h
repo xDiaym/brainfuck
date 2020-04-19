@@ -7,12 +7,13 @@
 
 
 typedef struct token {
-    token_type          type;
-    struct token        *next;
+    token_type type;
+    struct token *next;
 } token_t;
 
 
 token_t *create_token(token_type type);
-void delete_token(token_t* token);
+
+void delete_token(token_t *token);
 
 #endif /* BRAINFUCK_TOKEN_H */
