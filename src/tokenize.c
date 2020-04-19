@@ -2,8 +2,6 @@
 
 token_type get_token_type(int symbol) {
     switch (symbol) {
-        case '\0':
-            return EOF_TOKEN;
         case '+':
             return INCREMENT;
         case '-':
@@ -30,7 +28,7 @@ void tokenize(token_list_t *list, FILE *file) {
         return;
     }
 
-    int symbol = 0;
+    int symbol = UNKNOWN;
     while ((symbol = getc(file)) != EOF) {
         token_type type = get_token_type(symbol);
         if (type != UNKNOWN) {

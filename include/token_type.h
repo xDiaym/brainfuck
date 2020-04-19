@@ -3,8 +3,6 @@
 
 #include <stdint.h>
 
-#define EOF_TOKEN               (0)
-
 #define INCREMENT               (1)
 #define DECREMENT               (2)
 #define LEFT_SHIFT              (3)
